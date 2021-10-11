@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Direcciones</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+<section class="container pt-5">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Calle</th>
+					<th scope="col">Numero</th>
+					<th scope="col">Ciudad</th>
+					<th scope="col">Tipo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="dir : ${direcciones}">
+					<td th:text="${dir.calle}"/>
+					<td th:text="${dir.numero}"/>
+					<td th:text="${dir.ciudad}"/>
+					<td th:text="${dir.tipo}"/>
+					
+				</tr>
+			</tbody>
+		</table>
+
+	</section>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
